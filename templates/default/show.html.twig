@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{post.title}}{% endblock %}
+{% block body %}
+    <h1>{{ post.title }}</h1>
+                <p>{{ post.content }}</p>
+            </tr>
+            <tr>
+                <span>Créer le:</span>
+                <p>{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</p>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_default') }}">Retour à l'acceuil</a>
+
+    {% endblock %}
